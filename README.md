@@ -19,6 +19,9 @@ npm run dev
 Then open:
 http://localhost:5173
 
+or
+open : https://profound-stardust-9251fb.netlify.app/
+
 ## 🛠️ Built With
 
 - TypeScript
