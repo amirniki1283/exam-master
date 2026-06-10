@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-vazir: 'Vazirmatn', sans-serif;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-accent-400: #a78bfa;
+  --color-accent-500: #8b5cf6;
+  --color-accent-600: #7c3aed;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1a1a2e;
+  --color-card-light: #f8fafc;
+  --color-card-dark: #16213e;
+  --color-bg-light: #f0f4f8;
+  --color-bg-dark: #0f0f23;
+}
+
+* {
+  font-family: 'Vazirmatn', sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body, body.dark {
+  background-color: #0f0f23;
+  color: #e2e8f0;
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(99,102,241,0.3); }
+  50% { box-shadow: 0 0 20px rgba(99,102,241,0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.6s ease-out; }
+.animate-slideIn { animation: slideIn 0.5s ease-out; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(99,102,241,0.15);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: all 0.3s;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  transform: scale(1.02);
+}
